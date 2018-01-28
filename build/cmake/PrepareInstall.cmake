@@ -22,7 +22,7 @@ endfunction()
 # Setup pkg_config variables
 SET(PKG_CONFIG_REQUIRES "libcurl sqlite3")
 if(GSTREAMER_MEDIA_PLAYER)
-    SET(PKG_CONFIG_REQUIRES "${PKG_CONFIG_REQUIRES} gstreamer-1.0 gstreamer-app-1.0")
+    SET(PKG_CONFIG_REQUIRES "${PKG_CONFIG_REQUIRES} gstreamer")
 endif()
 if(TOTEM_PLPARSER)
     SET(PKG_CONFIG_REQUIRES "${PKG_CONFIG_REQUIRES} totem-plparser")
