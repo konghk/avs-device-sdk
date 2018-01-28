@@ -48,7 +48,7 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 # Determine the platform and compiler dependent flags.
 if (UNIX)
     set(CXX_PLATFORM_DEPENDENT_FLAGS_DEBUG      "-DDEBUG -DACSDK_DEBUG_LOG_ENABLED -Wall -Werror -Wsign-compare -g")
-    set(CXX_PLATFORM_DEPENDENT_FLAGS_RELEASE    "-DNDEBUG -Wall -Werror -O2")
+    set(CXX_PLATFORM_DEPENDENT_FLAGS_RELEASE    "-DNDEBUG -Wall -Werror -O2 -Wno-error=format")
     set(CXX_PLATFORM_DEPENDENT_FLAGS_MINSIZEREL "-DNDEBUG -Wall -Werror -Os")
 elseif(MSVC)
     set(CXX_PLATFORM_DEPENDENT_FLAGS_DEBUG      "/DDEBUG -DACSDK_DEBUG_LOG_ENABLED /W4 /WX /Zi")
